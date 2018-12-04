@@ -3,7 +3,7 @@
 
 require 'scraperwiki'
 require 'mechanize'
-# agent = Mechanize.new
+agent = Mechanize.new
 #
 # # Read in a page
 base_url = "https://write.kogus.org/articles/G6P2yH"
