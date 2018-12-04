@@ -18,7 +18,7 @@ base_page.at('table').search('tr').each do |tr|
     onomatope_jp: key,
     onomatope_en: value
   }
-  ScraperWiki.save_sqlite([:onomatope_jp], info,table_name=onomatopes)
+  ScraperWiki.save_sqlite([:onomatope_jp], info,table_name="onomatopes")
 end
 #
 # # Write out to the sqlite database using scraperwiki library
