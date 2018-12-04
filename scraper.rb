@@ -15,7 +15,7 @@ base_page.at('table').search('tr').each do |tr|
   key = tr.search('td:nth-child(2)').text
   value = tr.search('td:last-child').text
   info = {
-    onomatope_jp: key
+    onomatope_jp: key,
     onomatope_en: value
   }
   ScraperWiki.save_sqlite([:onomatope_jp], info,table_name=onomatopes)
