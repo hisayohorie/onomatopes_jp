@@ -11,6 +11,15 @@ base_page = agent.get(base_url)
 #
 # # Find somehing on the page using css selectors
 # p page.at('div.content')
+base_page.at('table').search('tr').each do |tr|
+  key = tr.search('td:nth-child(2)').text
+  value = tr.search('td:last-child').text
+  info = {
+    onomatope_jp: key
+    onomatope_en: value
+  }
+  ScraperWiki.save_sqlite([:onomatope_jp], info,table_name=onomatopes)
+end
 #
 # # Write out to the sqlite database using scraperwiki library
 # ScraperWiki.save_sqlite(["name"], {"name" => "susan", "occupation" => "software developer"})
