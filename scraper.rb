@@ -1,13 +1,13 @@
 # This is a template for a Ruby scraper on morph.io (https://morph.io)
 # including some code snippets below that you should find helpful
 
-# require 'scraperwiki'
-# require 'mechanize'
-#
+require 'scraperwiki'
+require 'mechanize'
 # agent = Mechanize.new
 #
 # # Read in a page
-# page = agent.get("http://foo.com")
+base_url = "https://write.kogus.org/articles/G6P2yH"
+base_page = agent.get(base_url)
 #
 # # Find somehing on the page using css selectors
 # p page.at('div.content')
